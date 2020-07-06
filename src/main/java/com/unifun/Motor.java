@@ -14,8 +14,8 @@ import lombok.ToString;
 
 public class Motor {
     private String version;
-    private MotorType motorType;
     private int power;
+    private MotorType motorType;
     private CompatibleVersion[] compatibleVersion;
 
 }

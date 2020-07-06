@@ -19,15 +19,15 @@ import java.nio.file.Paths;
 public class JsonPracticeRun {
     public static void main(String[] args) throws IOException {
 
-        Motor motor1 = new Motor("V120", MotorType.FOUR_STROKE_ENGINE,2500,new CompatibleVersion[]{CompatibleVersion.V123,CompatibleVersion.V134,CompatibleVersion.V136M});
-        Motor motor2 = new Motor("V110", MotorType.TWO_STROKE_ENGINE,1400,new CompatibleVersion[]{CompatibleVersion.V124,CompatibleVersion.V134});
-        Motor motor3 = new Motor("V2340", MotorType.FOUR_STROKE_ENGINE,2200,new CompatibleVersion[]{CompatibleVersion.V135});
-        Motor motor4 = new Motor("V450", MotorType.FOUR_STROKE_ENGINE,2600,new CompatibleVersion[]{CompatibleVersion.V123,CompatibleVersion.V140,CompatibleVersion.V134,CompatibleVersion.V136M});
+        Motor motor1 = new Motor("V120",2500, MotorType.FOUR_STROKE_ENGINE,new CompatibleVersion[]{CompatibleVersion.V123,CompatibleVersion.V134,CompatibleVersion.V136M});
+        Motor motor2 = new Motor("V110", 1400,MotorType.TWO_STROKE_ENGINE,new CompatibleVersion[]{CompatibleVersion.V124,CompatibleVersion.V134});
+        Motor motor3 = new Motor("V2340", 2200,MotorType.FOUR_STROKE_ENGINE,new CompatibleVersion[]{CompatibleVersion.V135});
+        Motor motor4 = new Motor("V450", 2600,MotorType.FOUR_STROKE_ENGINE,new CompatibleVersion[]{CompatibleVersion.V123,CompatibleVersion.V140,CompatibleVersion.V134,CompatibleVersion.V136M});
 
-        Car mercedes = new Car("Mercedes", BodyStyle.COUPE,new Complect[]{Complect.ABS,Complect.CONDITIONER},17,motor1);
-        Car mazda = new Car("Mercedes", BodyStyle.COUPE,new Complect[]{Complect.ABS,Complect.CONDITIONER},17,motor2);
-        Car bmw = new Car("Mercedes", BodyStyle.COUPE,new Complect[]{Complect.ABS,Complect.CONDITIONER},17,motor3);
-        Car audi = new Car("Mercedes", BodyStyle.COUPE,new Complect[]{Complect.ABS,Complect.CONDITIONER},17,motor4);
+        Car mercedes = new Car("Mercedes",18,motor1,new Complect[]{Complect.ABS,Complect.CONDITIONER}, BodyStyle.COUPE);
+        Car mazda = new Car("Mercedes",17,motor2,new Complect[]{Complect.ABS,Complect.CONDITIONER}, BodyStyle.SEDAN);
+        Car bmw = new Car("Mercedes",18,motor3 ,new Complect[]{Complect.ABS,Complect.CONDITIONER},BodyStyle.SEDAN);
+        Car audi = new Car("Mercedes",19,motor4, new Complect[]{Complect.ABS,Complect.CONDITIONER},BodyStyle.ROADSTER);
 
 
         ObjectMapper mapper = new ObjectMapper();

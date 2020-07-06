@@ -1,6 +1,6 @@
 package com.unifun;
 
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
+
 import com.unifun.enums.BodyStyle;
 import com.unifun.enums.Complect;
 import lombok.AllArgsConstructor;
@@ -14,10 +14,10 @@ import lombok.ToString;
 @AllArgsConstructor
 public class Car {
     private String brand;
-    private BodyStyle bodyStyle;
-    private Complect[] complect;
     private int wheelSize;
     private Motor motor;
+    private Complect[] complect;
+    private BodyStyle bodyStyle;
 
 
 
